@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BGMI Challenge - MR ROCKEY</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+background:radial-gradient(circle at top,#1f2a38,#090a0f);
+color:white;
+text-align:center;
+overflow-x:hidden;
+
+}
+
+/* CENTER SCREEN */
+
+.container{
+
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+/* CARD */
+
+.card{
+
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+width:90%;
+max-width:600px;
+box-shadow:0 0 30px rgba(255,200,0,0.4);
+
+}
+
+/* TITLES */
+
+h1{
+
+font-size:42px;
+color:#ffcc00;
+text-shadow:0 0 10px gold;
+margin-bottom:10px;
+
+}
+
+h2{
+
+margin:8px 0;
+
+}
+
+p{
+
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+
+}
+
+/* BUTTONS */
+
+button{
+
+padding:15px 35px;
+font-size:18px;
+margin:15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+.yes{
+
+background:#00ff9c;
+color:black;
+font-weight:bold;
+box-shadow:0 0 15px #00ff9c;
+
+}
+
+.no{
+
+background:#ff2a55;
+color:white;
+font-weight:bold;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+/* PROFILE PAGE */
+
+#profilePage{
+
+display:none;
+padding:40px;
+
+}
+
+.profile-img{
+
+width:180px;
+border-radius:50%;
+border:4px solid gold;
+margin-top:20px;
+box-shadow:0 0 25px gold;
+
+}
+
+/* STATS */
+
+.stats{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+
+}
+
+.stat{
+
+background:#ffcc00;
+color:black;
+padding:15px 25px;
+margin:10px;
+border-radius:10px;
+font-weight:bold;
+box-shadow:0 0 15px rgba(255,200,0,0.6);
+
+}
+
+/* QUOTE */
+
+.quote{
+
+margin-top:35px;
+font-size:20px;
+font-style:italic;
+color:#ffcc00;
+
+}
+
+/* ID */
+
+.id{
+
+font-size:22px;
+margin-top:20px;
+color:#00ff9c;
+font-weight:bold;
+
+}
+
+/* SCREENSHOT */
+
+.screenshot{
+
+margin-top:30px;
+width:320px;
+max-width:90%;
+border-radius:10px;
+border:3px solid white;
+box-shadow:0 0 20px black;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div class="container" id="questionPage">
+
+<div class="card">
+
+<h1>🔥 BGMI CHALLENGE 🔥</h1>
+
+<h2>I AM NOOB 😭</h2>
+<h2>MR ROCKEY IS PRO 👑</h2>
+
+<p>
+Honestly... I am scared to play room match with him 😨
+</p>
+
+<p>
+Do you also think MR ROCKEY is unbeatable?
+</p>
+
+<button class="yes" onclick="showProfile()">YES 😎</button>
+<button class="no" id="noBtn">NO 😏</button>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div id="profilePage">
+
+<h1>👑 MR ROCKEY 👑</h1>
+
+<!-- PROFILE IMAGE CHANGE HERE -->
+<img src="F:\gojo.jpg" class="profile-img">
+
+<h2>No One Can Beat MR ROCKEY</h2>
+
+<div class="stats">
+
+<div class="stat">JIGGLE MASTER</div>
+<div class="stat">60 FPS GOD</div>
+<div class="stat">UNBEATABLE</div>
+<div class="stat">ROOM KING</div>
+<div class="stat">HEADSHOT MACHINE</div>
+
+</div>
+
+<p class="quote">
+"Legends don't camp… they dominate the battleground."
+</p>
+
+<p class="quote">
+AIM IS COVER 🎯 <br>
+
+When the crosshair locks… enemies drop.
+</p>
+
+<h2>If you dare to challenge MR ROCKEY in room?</h2>
+
+<div class="id">
+BGMI ID : 51284931389
+</div>
+
+<!-- SCREENSHOT -->
+<img src="F:\mr.rockey .jpeg" class="screenshot">
+
+</div>
+
+
+<script>
+
+/* NO BUTTON ESCAPE */
+
+const noBtn=document.getElementById("noBtn");
+
+function moveButton(){
+
+let x=Math.random()*window.innerWidth-100;
+let y=Math.random()*window.innerHeight-100;
+
+noBtn.style.position="absolute";
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+
+}
+
+noBtn.addEventListener("mouseover",moveButton);
+noBtn.addEventListener("touchstart",moveButton);
+
+/* YES BUTTON */
+
+function showProfile(){
+
+document.getElementById("questionPage").style.display="none";
+document.getElementById("profilePage").style.display="block";
+
+window.scrollTo(0,0);
+
+}
+
+</script>
+
+</body>
+</html>
